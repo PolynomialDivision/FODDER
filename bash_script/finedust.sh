@@ -33,4 +33,5 @@ while true; do
 	
 	echo "Fine dust PPM25: $PPM25"
 	echo "Fine dust PPM10: $PPM10"
-	done
+	echo " "
+done
