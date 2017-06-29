@@ -1,7 +1,9 @@
 # FODDER
 Fine Dust Daemon
 
-## Running fine dust script
+## Fine Dust Script
+
+!["Fine Dust Script on LEDE"](https://github.com/PolynomialDivision/FODDER/blob/master/docs/img/fine_dust_lede.png)
 
 ### Requirements
 
