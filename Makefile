@@ -30,11 +30,13 @@ endef
 
 define Package/fodder/install
 	$(INSTALL_DIR) $(1)/usr/sbin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/fodder $(1)/usr/sbin/dawn
-	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/fodder.init $(1)/etc/init.d/dawn
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/fodder $(1)/usr/sbin/fodder
+
+	$(INSTALL_DIR) $(1)/etc/init.d/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/fodder.init $(1)/etc/init.d/fodder
 	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) $(PKG_BUILD_DIR)/files/fodder.config $(1)/etc/config/dawn
+	$(INSTALL_CONF) $(PKG_BUILD_DIR)/files/fodder.config $(1)/etc/config/fodder
 endef
+
 
 $(eval $(call BuildPackage,fodder))
