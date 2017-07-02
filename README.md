@@ -6,6 +6,20 @@ The daemon will always send the data in certain time steps to the luftdaten.info
 
 !["WDR4300 and SDS011"](https://github.com/PolynomialDivision/FODDER/blob/master/docs/img/WDR4300_SDS011.jpg)
 
+### Compile
+
+    cd lede/source/package
+
+    git clone https://github.com/PolynomialDivision/FODDER.git
+
+    make menuconfig (select fodder)
+
+    ./scripts/feeds update -a
+
+    ./scripts/feeds install -a
+
+    make package/FODDER/compile
+
 ## Fine Dust Script
 
 !["Fine Dust Script on LEDE"](https://github.com/PolynomialDivision/FODDER/blob/master/docs/img/fine_dust_lede.png)
