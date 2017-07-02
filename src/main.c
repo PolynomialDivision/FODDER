@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
     return -1;
   }
 
-  //setup_serial_port("/dev/ttyUSB0");
+  setup_serial_port("/dev/ttyUSB0");
 
   ubus_add_uloop(ctx);
 

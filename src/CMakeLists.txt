@@ -6,8 +6,8 @@ ADD_DEFINITIONS(-Os -Wall -Werror --std=gnu99 -Wmissing-declarations -Wno-unknow
 SET(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
 
 SET(SOURCES
-	main.c)
-	#lib_serial.c lib_serial.h)
+	main.c
+	lib_serial.c lib_serial.h)
 
 SET(LIBS
 	ubox ubus)
