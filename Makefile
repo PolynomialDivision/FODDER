@@ -2,6 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=fodder
 PKG_RELEASE:=1
+PKG_VERSION:=0.1
 
 # later will be included in feeds
 #PKG_SOURCE_PROTO:=git
@@ -29,11 +30,11 @@ endef
 
 define Package/fodder/install
 	$(INSTALL_DIR) $(1)/usr/sbin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/daemon/src/dawn $(1)/usr/sbin/dawn
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/src/fodder $(1)/usr/sbin/dawn
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/daemon/files/dawn.init $(1)/etc/init.d/dawn
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/files/fodder.init $(1)/etc/init.d/dawn
 	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) $(PKG_BUILD_DIR)/daemon/files/dawn.config $(1)/etc/config/dawn
+	$(INSTALL_CONF) $(PKG_BUILD_DIR)/files/fodder.config $(1)/etc/config/dawn
 endef
 
 $(eval $(call BuildPackage,fodder))
