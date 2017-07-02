@@ -1,5 +1,7 @@
 #include <libubus.h>
 #include <stdio.h>
+#include <libubox/blobmsg_json.h>
+#include <libubox/uloop.h>
 
 #include "lib_serial.h"
 
@@ -8,6 +10,8 @@ static struct ubus_context *ctx;
 int main(int argc, char **argv) {
   const char *ubus_socket = NULL;
   int ch;
+
+  printf("FODDER STARTING!!!\n");
 
   while ((ch = getopt(argc, argv, "cs:")) != -1) {
     switch (ch) {

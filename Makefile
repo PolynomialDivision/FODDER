@@ -21,7 +21,7 @@ define Package/fodder
   TITLE:= Fine Dust Daemon.
   MAINTAINER:= Nick Hainke <vincent@systemli.org>
   URL:=https://github.com/PolynomialDivision/FODDER
-  DEPENDS:=$(DRV_DEPENDS) +libubus +libubox
+  DEPENDS:=$(DRV_DEPENDS) +libubus +libubox +libblobmsg-json
 endef
 
 define Package/fodder/description

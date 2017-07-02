@@ -10,7 +10,7 @@ SET(SOURCES
 	lib_serial.c lib_serial.h)
 
 SET(LIBS
-	ubox ubus)
+	ubox ubus json-c blobmsg_json)
 
 ADD_EXECUTABLE(fodder ${SOURCES})
 
